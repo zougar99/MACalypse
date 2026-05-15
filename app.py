@@ -3194,10 +3194,10 @@ class App(tk.Tk):
         tg_btn = tk.Button(card, text="\u2709  Telegram", bg=BLUE, fg="#fff",
                            font=("Segoe UI", 11, "bold"), bd=0, cursor="hand2",
                            padx=20, pady=6,
-                           command=lambda: webbrowser.open("https://t.me/GHOST_ZONE_DZ"))
+                           command=lambda: webbrowser.open("https://t.me/werlist99"))
         tg_btn.pack(pady=6)
 
-        tk.Label(card, text="@GHOST_ZONE_DZ", bg=BG3, fg=BLUE,
+        tk.Label(card, text="@werlist99", bg=BG3, fg=BLUE,
                  font=("Segoe UI", 9)).pack()
 
         tk.Label(card, text="\nRun as Administrator for full features.\n"
