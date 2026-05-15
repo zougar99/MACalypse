@@ -1,86 +1,38 @@
-# MACalypse - 36 Network Tools
+# MACalypse - 42 Network & System Tools
 
-Application Windows pour changer/manager l'identité réseau, avec 36 outils intégrés.
+Application Windows pour manager l'identité réseau, avec 42 outils intégrés.
 
 ## Fonctionnalités
 
-### Identity (5)
-- **MAC Address** - Changer, reset, random, bulk change
-- **IP Address** - IP statique, DHCP, random IP
-- **DNS** - Set DNS, auto, flush, presets (Google, Cloudflare, etc.)
-- **Hostname** - Changer nom PC, random
-- **Hardware ID** - Scan HWID, spoof MachineGUID
+### Identity
+MAC Address, IP Address, DNS, Hostname, Hardware ID
 
-### Privacy (3)
-- **Browser Clean** - Nettoyer Chrome, Edge, Firefox, Brave, Opera
-- **Proxy** - Enable/disable, presets (Tor, Burp, Fiddler)
-- **Hosts File** - Lire/éditer, bloquer sites
+### Privacy
+Browser Clean, Proxy, Hosts File
 
-### Network (6)
-- **Public IP** - Voir IP publique + infos géo
-- **WiFi Pass** - Afficher mots de passe WiFi enregistrés
-- **Net Info** - Infos réseau détaillées
-- **NetScan** - Scanner réseau local (ping sweep)
-- **Speed Test** - Test de débit (1MB/10MB)
-- **Network Usage** - Statistiques interfaces (bytes, packets)
+### Network
+Public IP, WiFi Pass, Net Info, NetScan, Speed Test, Network Usage
 
-### Diagnostic (7)
-- **Connections** - Afficher connexions actives
-- **Ping/Trace** - Ping et traceroute
-- **DNS Lookup** - Lookup DNS, MX, NS + résolution IP
-- **ARP/Routes** - Table ARP et routage
-- **IP Geolocate** - Géolocalisation IP
-- **DNS Benchmark** - Benchmark 5 serveurs DNS
-- **Subnet Calc** - Calculateur de sous-réseau CIDR
+### Diagnostic
+Connections, Ping/Trace, DNS Lookup, ARP/Routes, IP Geolocate, DNS Benchmark, Subnet Calc, Network Time (NTP)
 
-### Security (4)
-- **Firewall** - Enable/disable/status
-- **Port Scanner** - Scan ports avec quick top 40
-- **Processes** - Voir processus réseau
-- **Adapter Ctl** - Enable/disable/cycle adaptateur
+### Security
+Firewall, Port Scanner, Processes, Adapter Ctl
 
-### System (6)
-- **System Info** - Infos complètes système
-- **Startup** - Voir programmes au démarrage
-- **Temp Cleaner** - Nettoyer fichiers temporaires
-- **Task Kill** - Tuer processus par nom
-- **Scheduled Tasks** - Top 50 tâches planifiées
-- **Disk Info** - Infos disques (usage, espace libre)
+### System
+System Info, Startup, Temp Cleaner, Task Kill, Scheduled Tasks, Disk Info, Uptime, Installed Apps, Services, Environment
 
-### Utils (5)
-- **Hash Gen** - MD5, SHA1, SHA256, SHA512
-- **PassGen** - Générer mots de passe
-- **Wake on LAN** - Envoi paquet magique
-- **Clipboard** - Vider presse-papier
-- **MAC Vendor** - Identifier fabricant par MAC OUI
-- **Bluetooth** - Scanner périphériques Bluetooth
+### Utils
+Hash Gen, PassGen, Wake on LAN, Clipboard, MAC Vendor, Bluetooth, MAC Converter, About
 
 ## Installation
-
-### 1. Installer Python 3.10+
-
-Télécharger depuis https://python.org (cocher "Add to PATH")
-
-### 2. Installer les dépendances
 
 ```
 pip install -r requirements.txt
 ```
 
-### 3. Lancer l'application
+**IMPORTANT : Lancer en tant qu'Administrateur.**
 
-Double-cliquez sur `run.bat` ou :
+## Contact
 
-```
-python app.py
-```
-
-**IMPORTANT : L'application doit être lancée en tant qu'Administrateur.**
-
-## Utilisation
-
-1. L'application demande automatiquement les droits Administrateur
-2. Sélectionnez un adaptateur réseau dans la liste à gauche
-3. Naviguez entre les catégories (Identity, Privacy, Network, etc.)
-4. Utilisez les outils dans les onglets de chaque catégorie
-5. Consultez le log d'activité en bas pour le suivi des opérations
+Telegram: @GHOST_ZONE_DZ

@@ -1335,14 +1335,33 @@ def export_to_file(content, filename):
         return None
 
 
+TOOL_EMOJI = {
+    "MAC Address": "\U0001f512", "IP Address": "\U0001f310", "DNS": "\U0001f4e1",
+    "Hostname": "\U0001f4bb", "Hardware ID": "\U0001f194",
+    "Browser Clean": "\U0001f9f9", "Proxy": "\U0001f50c", "Hosts File": "\U0001f4c4",
+    "Public IP": "\U0001f30d", "WiFi Pass": "\U0001f4f6", "Net Info": "\U0001f4ca",
+    "NetScan": "\U0001f50d", "Speed Test": "\u26a1", "Network Usage": "\U0001f4c8",
+    "Connections": "\U0001f517", "Ping/Trace": "\U0001f4e8", "DNS Lookup": "\U0001f50e",
+    "ARP/Routes": "\U0001f30d", "IP Geolocate": "\U0001f4cd", "DNS Benchmark": "\u23f0",
+    "Subnet Calc": "\U0001f9ee", "Network Time": "\U0001f550",
+    "Firewall": "\U0001f6e1", "Port Scanner": "\U0001f513", "Processes": "\u2699",
+    "Adapter Ctl": "\U0001f518",
+    "System Info": "\U0001f5a5", "Startup": "\U0001f680", "Temp Cleaner": "\U0001f5d1",
+    "Task Kill": "\u2620", "Scheduled Tasks": "\U0001f4cb", "Disk Info": "\U0001f4be",
+    "Uptime": "\u23f0", "Installed Apps": "\U0001f4e6", "Services": "\U0001f527",
+    "Environment": "\U0001f33f",
+    "Hash Gen": "#", "PassGen": "\U0001f511", "Wake on LAN": "\U0001f319",
+    "Clipboard": "\U0001f4cb", "MAC Vendor": "\U0001f3ed", "Bluetooth": "\U0001f501",
+    "About": "\u2139", "MAC Converter": "\U0001f504",
+}
 CATEGORIES = [
-    ("Identity", BLUE, ["MAC Address", "IP Address", "DNS", "Hostname", "Hardware ID"]),
-    ("Privacy", PURPLE, ["Browser Clean", "Proxy", "Hosts File"]),
-    ("Network", GREEN, ["Public IP", "WiFi Pass", "Net Info", "NetScan", "Speed Test", "Network Usage"]),
-    ("Diagnostic", CYAN, ["Connections", "Ping/Trace", "DNS Lookup", "ARP/Routes", "IP Geolocate", "DNS Benchmark", "Subnet Calc", "Network Time"]),
-    ("Security", RED, ["Firewall", "Port Scanner", "Processes", "Adapter Ctl"]),
-    ("System", ORANGE, ["System Info", "Startup", "Temp Cleaner", "Task Kill", "Scheduled Tasks", "Disk Info", "Uptime", "Installed Apps", "Services", "Environment"]),
-    ("Utils", PINK, ["Hash Gen", "PassGen", "Wake on LAN", "Clipboard", "MAC Vendor", "Bluetooth", "About", "MAC Converter"]),
+    ("\U0001f512 Identity", BLUE, ["MAC Address", "IP Address", "DNS", "Hostname", "Hardware ID"]),
+    ("\U0001f6f8 Privacy", PURPLE, ["Browser Clean", "Proxy", "Hosts File"]),
+    ("\U0001f30d Network", GREEN, ["Public IP", "WiFi Pass", "Net Info", "NetScan", "Speed Test", "Network Usage"]),
+    ("\U0001f52c Diagnostic", CYAN, ["Connections", "Ping/Trace", "DNS Lookup", "ARP/Routes", "IP Geolocate", "DNS Benchmark", "Subnet Calc", "Network Time"]),
+    ("\U0001f6e1 Security", RED, ["Firewall", "Port Scanner", "Processes", "Adapter Ctl"]),
+    ("\U0001f5a5 System", ORANGE, ["System Info", "Startup", "Temp Cleaner", "Task Kill", "Scheduled Tasks", "Disk Info", "Uptime", "Installed Apps", "Services", "Environment"]),
+    ("\U0001f3b2 Utils", PINK, ["Hash Gen", "PassGen", "Wake on LAN", "Clipboard", "MAC Vendor", "Bluetooth", "About", "MAC Converter"]),
 ]
 
 
@@ -1382,7 +1401,7 @@ class App(tk.Tk):
         hdr = tk.Frame(self, bg=BG2, height=48)
         hdr.pack(fill="x")
         hdr.pack_propagate(False)
-        tk.Label(hdr, text="  MACalypse", bg=BG2, fg=RED,
+        tk.Label(hdr, text="  \U0001f47e MACalypse", bg=BG2, fg=RED,
                  font=("Segoe UI", 15, "bold")).pack(side="left", padx=8, pady=8)
         tk.Label(hdr, text="42 Tools", bg=BG2, fg=PURPLE, font=("Segoe UI", 9)).pack(side="left", padx=4)
         atxt = "ADMIN" if is_admin() else "NO ADMIN"
@@ -1409,13 +1428,13 @@ class App(tk.Tk):
         hdr2 = tk.Frame(sidebar, bg=BG2)
         hdr2.pack(fill="x", padx=4, pady=(4, 2))
         tk.Label(hdr2, text="Adapters", bg=BG2, fg=FG, font=("Segoe UI", 9, "bold")).pack(side="left")
-        tk.Button(hdr2, text="Refresh", bg=BLUE, fg="#fff", font=("Segoe UI", 7, "bold"),
+        tk.Button(hdr2, text="\U0001f504 Refresh", bg=BLUE, fg="#fff", font=("Segoe UI", 7, "bold"),
                   bd=0, cursor="hand2", command=self._load_adapters).pack(side="right")
 
         self.adapter_frame = tk.Frame(sidebar, bg=BG2)
         self.adapter_frame.pack(fill="both", expand=True, padx=4, pady=2)
 
-        tk.Button(sidebar, text="FULL IDENTITY RESET", bg=RED, fg="#fff",
+        tk.Button(sidebar, text="\U0001f504 FULL IDENTITY RESET", bg=RED, fg="#fff",
                   font=("Segoe UI", 10, "bold"), bd=0, cursor="hand2", height=2,
                   command=self._full_reset).pack(fill="x", padx=6, pady=(4, 4))
         tk.Button(sidebar, text="Export Log", bg=BG3, fg=DIM, font=("Segoe UI", 8),
@@ -1442,7 +1461,7 @@ class App(tk.Tk):
 
         lf = tk.Frame(right, bg=BG2)
         lf.pack(fill="x", pady=(6, 0))
-        tk.Label(lf, text="Activity Log", bg=BG2, fg=DIM, font=("Segoe UI", 8, "bold")).pack(
+        tk.Label(lf, text="\U0001f4dd Activity Log", bg=BG2, fg=DIM, font=("Segoe UI", 8, "bold")).pack(
             anchor="w", padx=6, pady=(4, 1))
         self.log_box = tk.Text(lf, bg="#0d1117", fg=FG, font=("Consolas", 8), height=5,
                                bd=0, wrap="word", insertbackground=FG)
@@ -1452,7 +1471,8 @@ class App(tk.Tk):
             nb = ttk.Notebook(self._content)
             for tool_name in tools:
                 page = tk.Frame(nb, bg=BG2, padx=12, pady=12)
-                nb.add(page, text="  " + tool_name + "  ")
+                tab_name = TOOL_EMOJI.get(tool_name, "") + " " + tool_name
+                nb.add(page, text="  " + tab_name + "  ")
                 self._build_tool(tool_name, page)
             self._cat_frames[cat_name] = nb
 
@@ -3152,8 +3172,8 @@ class App(tk.Tk):
         sep.pack(fill="x", pady=8)
 
         info_items = [
-            ("Version", "2.0"),
-            ("Tools", "36"),
+            ("Version", "2.1"),
+            ("Tools", "42"),
             ("Categories", "7"),
             ("Python", sys.version.split()[0]),
         ]
