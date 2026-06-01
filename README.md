@@ -1,38 +1,21 @@
-# 👾 MACalypse - 42 Network & System Tools
+# 📡 MACalypse
 
-Windows application to manage network identity with **42 integrated tools**.
+> MACalypse - Network Identity Toolkit with 42 tools for Windows
 
-## 📋 Features
+## ✨ Features
 
-### 🔒 Identity
-🔒 MAC Address · 🌐 IP Address · 📡 DNS · 💻 Hostname · 🆔 Hardware ID
+- Core functionality as described above
+- Built with modern technologies
+- Easy to set up and use
 
-### 🛸 Privacy
-🧹 Browser Clean · 🔌 Proxy · 📄 Hosts File
+## 💻 Installation
 
-### 🌍 Network
-🌍 Public IP · 📶 WiFi Pass · 📊 Net Info · 🔍 NetScan · ⚡ Speed Test · 📈 Network Usage
-
-### 🔬 Diagnostic
-🔗 Connections · 📨 Ping/Trace · 🔎 DNS Lookup · 🗺️ ARP/Routes · 📍 IP Geolocate · ⏱️ DNS Benchmark · 🧮 Subnet Calc · 🕐 Network Time (NTP)
-
-### 🛡️ Security
-🛡️ Firewall · 🔓 Port Scanner · ⚙️ Processes · 🔘 Adapter Ctl
-
-### 🖥️ System
-🖥️ System Info · 🚀 Startup · 🗑️ Temp Cleaner · 💀 Task Kill · 📋 Scheduled Tasks · 💾 Disk Info · ⏰ Uptime · 📦 Installed Apps · 🔧 Services · 🌿 Environment
-
-### 🎲 Utils
-#️⃣ Hash Gen · 🔑 PassGen · 🌙 Wake on LAN · 📋 Clipboard · 🏭 MAC Vendor · 📡 Bluetooth · 🔄 MAC Converter · ℹ️ About
-
-## 📦 Installation
-
-```
-pip install -r requirements.txt
+```bash
+git clone https://github.com/zougar99/MACalypse.git
+cd MACalypse
 ```
 
-**⚠️ IMPORTANT: Run as Administrator for full features.**
+## ℹ️ About
 
-## 📞 Contact
-
-Telegram: [@werlist99](https://t.me/werlist99)
+Part of the [zougar99](https://github.com/zougar99) project portfolio.
+Built with ❤️
